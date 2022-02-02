@@ -1,8 +1,6 @@
 //---- GLOBAL VARIABLES ----//
 let game: Game;
-let turtle: p5.Image;
-let monkey: p5.Image;
-let barricade: p5.Image;
+let images: Images;
 // let sound: p5.SoundFile
 
 /**
@@ -12,9 +10,11 @@ let barricade: p5.Image;
  */
 function preload() {
     // sound: p5.SoundFile = loadSound('../assets/mySound.wav');
-        turtle = loadImage('assets/images/turtleFront.png'),
-        monkey = loadImage('assets/images/monkeyFront.png');
-        barricade = loadImage('assets/images/barricade.png');
+    images = {
+        playerLeft: loadImage('assets/images/playerLeft.png'),
+        playerRight: loadImage('assets/images/playerRight.png'),
+        bullet: loadImage('assets/images/bullet.png'),
+    }
 }
 
 /**

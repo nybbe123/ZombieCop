@@ -1,15 +1,15 @@
 class Game {
-    private gameBoard: GameBoard;
+    private gameboard: Gameboard;
 
     constructor() {
-        this.gameBoard = new GameBoard();
+        this.gameboard = new Gameboard();
     }
 
     update() {
-        this.gameBoard.update();
+        this.gameboard.update();
     }
 
     draw() {
-        this.gameBoard.draw();
+        this.gameboard.draw();
     }
 }
