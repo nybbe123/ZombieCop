@@ -1,15 +1,38 @@
-class Game {
-    private gameboard: Gameboard;
+type GameStateLabel = 'Start' | 'GameRules' | 'Running' | 'Pause' | 'GameOver';
 
+interface GameState {
+    activeGameState: GameStateLabel;
+    setGameState: (state: GameStateLabel) => void;
+}
+
+class Game implements GameState {
+    public activeGameState: GameStateLabel;
+    private startMenu: StartMenu;
+    private gameboard: Gameboard;
+    
     constructor() {
-        this.gameboard = new Gameboard();
+        this.activeGameState = 'Start';
+        this.startMenu = new StartMenu(this);
+        this.gameboard = new Gameboard(this);
+    }
+    
+    public setGameState = (state: GameStateLabel) => {
+        this.activeGameState = state;
+        if(state === 'Start') {
+            this.startMenu.openStartMenu();
+        } else if(state === 'Running') {
+        }
     }
 
     update() {
-        this.gameboard.update();
+        if(this.activeGameState === 'Running') {
+            this.gameboard.update();
+        }
     }
 
     draw() {
-        this.gameboard.draw();
+        if(this.activeGameState === 'Running') {
+            this.gameboard.draw();
+        }
     }
 }

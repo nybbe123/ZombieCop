@@ -5,7 +5,10 @@ interface Controls {
 }
 
 interface Images {
-    player: p5.Image,
+    playerFront: p5.Image,
+    playerLeft: p5.Image,
+    playerRight: p5.Image,
     enemy: p5.Image,
-    bullet: p5.Image
+    bullet: p5.Image,
+    life: p5.Image
 }

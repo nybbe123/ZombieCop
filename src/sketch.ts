@@ -11,9 +11,12 @@ let images: Images;
 function preload() {
     // sound: p5.SoundFile = loadSound('../assets/mySound.wav');
     images = {
-        player: loadImage('assets/images/player.png'),
+        playerFront: loadImage('assets/images/playerFront.png'),
+        playerLeft: loadImage('assets/images/playerLeft.png'),
+        playerRight: loadImage('assets/images/playerRight.png'),
         enemy: loadImage('assets/images/enemy.png'),
-        bullet: loadImage('assets/images/bullet.png')
+        bullet: loadImage('assets/images/bullet.png'),
+        life: loadImage('assets/images/life.png')
     }
 }
 
@@ -37,8 +40,6 @@ function setup() {
  * you created in the setup function above
  */
 function draw() {
-    background('black');
-
     game.update();
     game.draw();
 }

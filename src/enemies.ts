@@ -14,10 +14,10 @@ class Enemy {
     public update() {
         this.position.y += this.velocity;
         
-        if(this.position.y > height) {
-            this.position.x = random(0, width);
-            this.position.y = random(-1200, 0);
-        }
+        // if(this.position.y > height) {
+        //     this.position.x = random(0, width);
+        //     this.position.y = random(-1200, 0);
+        // }
     }
     
     public draw() {

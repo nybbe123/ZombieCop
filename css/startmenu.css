@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Nosifer&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    color: white;
+    overflow: hidden;
+    font-family: 'Creepster', cursive;
+}
+
+h1 {
+    font-size: 10rem;
+    color: rgb(219, 108, 108);
+    margin-bottom: 2rem;
+}
+
+.start-main-div{
+    inset: 0;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.btn {
+    font-family: 'Nosifer', cursive;
+    font-size: 2rem;
+    padding: .5rem 2.5rem;
+    border: none;
+}
+
+.btn:hover {
+    transform: rotate(4deg);
+    background-color: rgb(34, 34, 34);
+    color: rgb(219, 108, 108);
+    cursor: pointer;
+    border: none;
+}
