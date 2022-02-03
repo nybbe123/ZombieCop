@@ -8,19 +8,18 @@ interface GameState {
 class Game implements GameState {
     public activeGameState: GameStateLabel;
     private startMenu: StartMenu;
-    private gameboard: Gameboard;
+    private gameboard: GameBoard;
     
     constructor() {
         this.activeGameState = 'Start';
         this.startMenu = new StartMenu(this);
-        this.gameboard = new Gameboard(this);
+        this.gameboard = new GameBoard(this);
     }
     
     public setGameState = (state: GameStateLabel) => {
         this.activeGameState = state;
         if(state === 'Start') {
             this.startMenu.openStartMenu();
-        } else if(state === 'Running') {
         }
     }
 

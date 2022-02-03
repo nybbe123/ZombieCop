@@ -1,4 +1,4 @@
-class Gameboard {
+class GameBoard {
     public gameState: GameState;
     private factory: Factory;
     private enemies: Enemy[];
@@ -37,6 +37,8 @@ class Gameboard {
             }
             for(const bullet of this.player.bullets) {
                 if(dist(enemy.position.x, enemy.position.y, bullet.x, bullet.y) < 40) {
+                    imageMode(CENTER);
+                    image(images.explosion, enemy.position.x, enemy.position.y, 105, 105);
                     this.enemies.splice(this.enemies.indexOf(enemy), 1);
                     this.player.bullets.splice(this.player.bullets.indexOf(bullet), 1);
                     this.player.score += 10;

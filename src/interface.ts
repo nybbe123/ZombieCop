@@ -10,5 +10,6 @@ interface Images {
     playerRight: p5.Image,
     enemy: p5.Image,
     bullet: p5.Image,
-    life: p5.Image
+    life: p5.Image,
+    explosion: p5.Image
 }

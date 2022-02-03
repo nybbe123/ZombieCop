@@ -16,7 +16,8 @@ function preload() {
         playerRight: loadImage('assets/images/playerRight.png'),
         enemy: loadImage('assets/images/enemy.png'),
         bullet: loadImage('assets/images/bullet.png'),
-        life: loadImage('assets/images/life.png')
+        life: loadImage('assets/images/life.png'),
+        explosion: loadImage('assets/images/explosion.png')
     }
 }
 
@@ -29,7 +30,6 @@ function preload() {
 function setup() {
     createCanvas(windowWidth, windowHeight);
     frameRate(60);
-    // noCursor();
     
     game = new Game();
 }
@@ -40,6 +40,7 @@ function setup() {
  * you created in the setup function above
  */
 function draw() {
+    background('black');
     game.update();
     game.draw();
 }
