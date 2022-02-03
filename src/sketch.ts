@@ -11,9 +11,9 @@ let images: Images;
 function preload() {
     // sound: p5.SoundFile = loadSound('../assets/mySound.wav');
     images = {
-        playerLeft: loadImage('assets/images/playerLeft.png'),
-        playerRight: loadImage('assets/images/playerRight.png'),
-        bullet: loadImage('assets/images/bullet.png'),
+        player: loadImage('assets/images/player.png'),
+        enemy: loadImage('assets/images/enemy.png'),
+        bullet: loadImage('assets/images/bullet.png')
     }
 }
 
