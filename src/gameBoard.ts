@@ -28,12 +28,8 @@ class GameBoard {
                 this.player.lifes.pop();
                 this.factory.createNewEnemy();
             }
-
             if(this.player.lifes.length == 0) {
-                fill('white');
-                textSize(40);
-                text('GAME OVER', width / 2, height * .5);
-                noLoop();
+                this.gameState.setGameState('GameOver');
             }
             for(const bullet of this.player.bullets) {
                 if(dist(enemy.position.x, enemy.position.y, bullet.x, bullet.y) < 40) {
@@ -64,5 +60,7 @@ class GameBoard {
         for(const enemy of this.enemies) {
             enemy.draw();
         }        
+
+        this.checkCollision();
     }
 }

@@ -40,7 +40,7 @@ function setup() {
  * you created in the setup function above
  */
 function draw() {
-    background('black');
+
     game.update();
     game.draw();
 }

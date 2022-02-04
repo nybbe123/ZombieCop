@@ -10,7 +10,6 @@ class StartMenu {
         
         const title = document.createElement('h1');
         title.textContent = 'ZombieCop';
-        title.className = 'game-title';
 
         const startNewGameBtn = document.createElement('button');
         startNewGameBtn.textContent = 'Start Game'
