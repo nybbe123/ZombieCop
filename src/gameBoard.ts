@@ -43,7 +43,7 @@ class GameBoard {
             }
         }
     }
-    
+
     public update() {
         this.player.update();
         

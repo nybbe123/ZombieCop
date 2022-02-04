@@ -16,12 +16,7 @@ class StartMenu {
         startNewGameBtn.className = 'btn';
         startNewGameBtn.addEventListener('click', () => this.startNewGame());
 
-        const gameRuleBtn = document.createElement('button');
-        gameRuleBtn.textContent = 'Game Rules';
-        gameRuleBtn.className = 'btn';
-        gameRuleBtn.addEventListener('click', () => this.openRuleMenu());
-
-        this.startMenuDiv.append(title, startNewGameBtn, gameRuleBtn);
+        this.startMenuDiv.append(title, startNewGameBtn);
         this.openStartMenu();
 
     }
@@ -32,11 +27,6 @@ class StartMenu {
 
     public startNewGame() {
         this.gameState.setGameState('Running');
-        this.startMenuDiv.remove();
-    }
-
-    public openRuleMenu() {
-        this.gameState.setGameState('GameRules');
         this.startMenuDiv.remove();
     }
 }

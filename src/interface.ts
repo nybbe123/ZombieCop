@@ -11,5 +11,6 @@ interface Images {
     enemy: p5.Image,
     bullet: p5.Image,
     life: p5.Image,
-    explosion: p5.Image
+    explosion: p5.Image,
+    boss: p5.Image
 }

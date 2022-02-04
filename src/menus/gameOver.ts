@@ -24,6 +24,7 @@ class GameOverMenu {
     }
 
     public quitGame() {
+        this.gameState.setGameState('Start');
         window.location.reload();
     }
 }

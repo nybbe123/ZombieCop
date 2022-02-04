@@ -17,7 +17,8 @@ function preload() {
         enemy: loadImage('assets/images/enemy.png'),
         bullet: loadImage('assets/images/bullet.png'),
         life: loadImage('assets/images/life.png'),
-        explosion: loadImage('assets/images/explosion.png')
+        explosion: loadImage('assets/images/explosion.png'),
+        boss: loadImage('assets/images/boss.png')
     }
 }
 
